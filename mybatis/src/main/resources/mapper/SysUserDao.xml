@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linilq.mybatis.dao.SysUserDao">
+
+    <resultMap id="BaseResultMap" type="com.linilq.mybatis.bean.SysUser">
+        <result column="id" property="id" />
+        <result column="userName" property="userName"/>
+        <result column="password" property="password"/>
+
+        <result column="isDelete" property="isDelete"/>
+        <result column="createTime" property="createTime"/>
+        <result column="createBy" property="createBy"/>
+        <result column="updateTime" property="updateTime"/>
+        <result column="updateBy" property="updateBy"/>
+
+    </resultMap>
+
+    <select id="getSysUserByName" resultMap="BaseResultMap" >
+        select * from sys_user where userName=#{userName}
+    </select>
+
+
+
+</mapper>
