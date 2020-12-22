@@ -8,4 +8,9 @@ import lombok.ToString;
 public class SysUser extends BaseDo{
     private String userName;
     private String password;
+
+    public SysUser(){
+        super();
+        System.out.println("hahahahahhahahahahahhahah");
+    }
 }
